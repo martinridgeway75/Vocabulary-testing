@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="google" content="notranslate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+		<title>Flashcards</title>
+        <!-- TODO -->
+        <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+        <script defer src="/__path-to__/firebase-auth.js"></script>
+        <script defer src="/__path-to__/firebase/init.js"></script> -->
+        <script src="js/utils.min.js"></script>
+      <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/flashcards.min.css" />
+	</head>
+	<body id="page">
+      <nav class="navbar navbar-default" style=" z-index:100;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <div style="display: inline-block">
+                  <img id="usrPhoto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+                </div>
+                <div id="slctdTchr" class="nodisplay" style="display: inline-block">
+                    <span id="chgSelected" style="cursor: pointer;">
+                        <span id="slctdTchrTxt"></span>
+                    </span>
+                </div>  
+            </div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="renderedNav" class="nav navbar-nav"></ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    <div class="container-fluid" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 pad-bottom"></div>
+            <div class="col-lg-6 col-md-6 pad-bottom">
+                <div id="chosenDeck" class="">
+                    <div id="studycards">
+                        <ul id="deck" class="cycle-slideshow"></ul>
+                        <div id="nav_deck" style="z-index:-100;">
+                            <span id="prev" class="arrow-left"></span>
+                            <div id="flipper"><span class="arrow-up"></span><span class="arrow-down"></span></div>
+                            <span id="next" class="arrow-right"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row"> 
+            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+            
+            <div class="col-lg-4 col-md-4 col-sm-4 pad-bottom">
+                <div class="text-center" style="margin: 0 0 30px 0">
+                    <div id="clssVoca" class="btn btn-primary">Class practice</div>
+                    <div>
+                        <div id="myFlashCards" class="btn btn-info">My Flashcards</div>
+                        <div id="showCRUDdiv" class="btn btn-xs btn-whiteBlue">Edit</div>
+                    </div>
+                </div>
+                <div id="showCRUD" class="nodisplay">
+                    <div class="panel panel-body panel-primary">
+                        <div id="hideCRUDdiv" class="btn btn-xs btn-whiteBlue">Save and Reload</div>
+                        <table id="regtable" class="table table-bordered table-striped table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Front</th>
+                                    <th>Back</th>
+                                    <th>Options</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablerows"></tbody>
+                        </table>
+                        <div class="well well-sm">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon" id="cardFront">Front:</span>
+                                <input type="text" class="form-control" id="firstname" aria-describedby="cardFront">
+                            </div>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon" id="cardBack">Back: </span>
+                                <input type="text" class="form-control" id="lastname" aria-describedby="cardBack">
+                            </div>
+                        </div>
+                        <div class="btn-group-sm" style="margin: 10px 0">
+                            <span id="submit" class="btn btn-xs btn-whiteBlue">Insert</span>
+                            <span id="clear" class="btn btn-xs btn-whiteBlue">Clear</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="js/flashcards.min.js"></script>
+</body>
+</html>

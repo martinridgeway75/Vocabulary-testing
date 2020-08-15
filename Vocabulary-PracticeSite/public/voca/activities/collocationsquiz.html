@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="google" content="notranslate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+		<title>Collocations Quiz</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase-database.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script> -->
+    <script src="js/utils.min.js"></script>
+      <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/slickquiz.css" />
+	</head>
+	<body id="page">
+      <nav class="navbar navbar-default" style=" z-index:100;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>              
+            <div class="navbar-brand">
+              <div style="display: inline-block">
+                <img id="usrPhoto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+              </div>
+                <div id="slctdTchr" class="nodisplay" style="display: inline-block">
+                    <span id="chgSelected" style="cursor: pointer;">
+                        <span id="slctdTchrTxt"></span>
+                    </span>
+                </div>  
+            </div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="renderedNav" class="nav navbar-nav"></ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>  
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-3 col-sm-3"></div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div id="slickQuiz" class="panel panel-body">
+                    <h4 class="quizName text-center"></h4>
+                    <div class="hr-grey"></div>
+                    <div id="startArea" class="quizArea"></div>
+                    <div class="quizResults">
+                        <h3 class="quizScore">You Scored: <span></span></h3>
+                        <h4 class="quizLevel">...<span></span></h4>
+                        <div class="quizResultsCopy"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/slickquiz.min.js"></script>        
+<script type="text/javascript" src="js/collocationsquiz.min.js"></script>        
+</body>
+</html>

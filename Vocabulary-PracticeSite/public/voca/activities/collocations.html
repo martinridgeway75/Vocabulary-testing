@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="google" content="notranslate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+    <title>Collocations Drop</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase-database.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script> -->
+    <script src="js/utils.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/twbs3.3.4.min.css" />
+        <style> #inner-dropzone > #targetWord { color:#2c3e50; font-size:24px; padding:0 20px; margin-top:20px; } #inner-dropzone.drop-target > #targetWord { color:#ffffff; } #inner-dropzone { height: 100px; } .dropzone { background-color: #ffffff; border: 1px solid; margin: 30px auto 5px auto; padding: 10px; display: block; width: 100%; transition: background-color 0.3s; } .drop-target { background-color: #5cb85c; border-color: transparent; } .drag-drop { font-size: 16px; display: inline-block; min-width: 40px; padding: 16px; margin: 2px; color: #fff; background-color: #337ab7; -webkit-transform: translate(0px, 0px); transform: translate(0px, 0px); transition: background-color 0.3s; } .drag-drop.can-drop { color: #fff; background-color: #4caf50; } #completedcollocations > p { margin: 0 0 5px 0; } #completedcollocations > p:before, p:before { content: "\2714\00a0\00a0"; color: #5cb85c; } #exA, #exA * { -ms-touch-action: none; touch-action: none; } .pull-left {float: left !important;} .winner {display: inline-block; margin-right: 5px;}</style>
+      </head>
+	<body id="page">
+      <nav class="navbar navbar-default" style=" z-index:100;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>              
+            <div class="navbar-brand">
+              <div style="display: inline-block">
+                <img id="usrPhoto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+              </div>
+                <div id="slctdTchr" class="nodisplay" style="display: inline-block">
+                    <span id="chgSelected" style="cursor: pointer;">
+                        <span id="slctdTchrTxt"></span>
+                    </span>
+                </div>  
+            </div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="renderedNav" class="nav navbar-nav"></ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>  
+<div class="container-fluid">        
+    <div class="row">
+        <div class="col-lg-3 col-md-3"></div>  
+          <div class="col-lg-6 col-md-6">
+              <div id="mem-feedback" class="text-center" style="display: none;">
+			      <h5 class="winner">Great Job! </h5>
+			      <button id="restart" class="btn btn-sm btn-whiteBlue">Reset</button>
+		      </div> 
+          </div>  
+        </div>
+    <div class="row text-center" style="margin-top:10px;">
+        <div class="col-lg-3 col-md-3"></div>
+        <div id="exA" class="col-lg-6 col-md-6">
+            <div id="exB">
+                <div class="drag-drop no"></div>
+                <div class="drag-drop no"></div>
+                <div class="drag-drop no"></div>
+            </div>                
+            <div id="outer-dropzone" class="">
+                <div id="inner-dropzone" class="dropzone"><span id="targetWord" class="pull-left"></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-left" style="margin-bottom:20px;">
+        <div class="col-lg-3 col-md-3"></div>
+        <div id="completedcollocations" class="col-lg-6 col-md-6"><br /></div>
+    </div>
+</div>
+<script type="text/javascript" src="js/interact.js"></script>
+<script type="text/javascript" src="js/collocations.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 	<meta charset="utf-8" />
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <title>Admin</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase-database.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script> -->
+    <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+    <style>
+        .btn.btn-sm.btn-default {vertical-align: bottom; margin-bottom: -3px;}
+        .btn.btn-sm.btn-fixwidth { min-width: 240px; max-width: 240px; text-overflow: clip; white-space: pre-line; margin: 5px 5px;}
+        .accessbtn {background-color: #5cb85c; border-color: #4cae4c; padding: 0 8px; display: inline-block; margin-right: 5px;margin-left: 10px;}
+        .accessbtn2 {background-color: #337ab7; border-color: #2e6da4; padding: 0 8px; display: inline-block; margin-right: 5px;}
+        .noAccessbtn {background-color: #fff; border: 1px solid #ccc; padding: 0 8px; display: inline-block; margin-right: 5px;margin-left: 10px;}
+    </style>
+  </head>
+<body>
+<div class="container-fluid">
+    <nav id="fullNav" class="navbar navbar-fixed-top navbar-default navbar-unslctd" style=" z-index:100;">
+        <div class="nav navbar-nav" style="float: left;">
+          <div class="navbar-form">
+            <img id="usrPhoto" class="pull-left" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+              <div class="navbar-text">PE4 Vocabulary</div>
+          </div>
+        </div>
+        <ul class="nav navbar-nav"> 
+          <li id="screenButtons" class="nodisplay">
+            <a href="../voca/" rel="noreferrer noopener" class="btn-whitePurple pull-right">TEST GENERATOR</a>
+          </li>
+          <li><a id="logout" href="#" rel="noreferrer noopener" class="icon-logout-1 pull-right"></a></li>
+        </ul>
+      </nav>
+    <div id="contentsBox" class="contentBox container-fluid nodisplay" style="margin-top: 60px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div style="margin-bottom: 10px;text-align: center;">
+                    <span style="display: inline-block; font-size: 2em;">Manage teacher access</span>                
+                    <div id="optActions" style="display: inline-block; margin-left: 10px;">
+                        <div id="updateUsers" class="btn btn-sm btn-default icon-database">Save</div>
+                        <div id="deleteUsers" class="btn btn-sm btn-default">Clear pending</div>
+                        <div id="revertUsers" class="btn btn-sm btn-default icon-arrows-ccw">Revert</div>
+                    </div>
+                
+                </div>
+                <div style="margin-bottom: 20px; text-align: center;">
+                    <span class="accessbtn2">&nbsp;</span> Moderator access <span class="accessbtn">&nbsp;</span> Teacher access <span class="noAccessbtn">&nbsp;</span> Access pending</div>
+                <div class="row">
+                    <div class="col-lg-12" id="manageOpts" class="nodisplay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/msc-script.min.js"></script>
+<script src="js/boss.min.js"></script>
+</body>
+</html>

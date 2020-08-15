@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="google" content="notranslate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+		<title>Crossword</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase-database.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script> -->
+    <script src="js/utils.min.js"></script>
+        <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+        <style>input[type="text"] {line-height: 1.25em;border: 1px solid #000;margin: 0;}table {border-collapse: collapse;border-spacing: 0;max-width: 100%;}table tr{width: 100%;}table td {width: 32px;height: 32px;padding: 0;margin: 0;position: relative;}td input {width: 100%;height: 100%;padding: 0;border: none;text-align: center;color: #666;background-color: #f4f4f4;}td input:focus {background-color: #fff;}td span {color: #444;font-size: 10px;position: absolute;top: 0;left: 2px;}input.done {font-weight: bold;font-size: 120%; color: #337ab7;cursor: not-allowed;pointer-events: none;background-color: #fff;}.active, .clues-active {background-color: #ddd;}.clue-done {color: green;text-decoration: line-through;}#puzzle {margin: 0 auto;}#puzzle-clues {float: left;width: 40%;}#puzzle-clues li{font-size: 16px;line-height: 1.6em;}ul#across, ul#down {padding: 0 16px;margin-top: 0;list-style: none;}h3 {margin: 0;padding: 0;}
+            .xword-cell {background-color: #fff; border: 1px solid #000; text-align: center}
+            .crossword {margin: 0 auto;}
+        </style>
+	</head>
+	<body id="page">
+      <nav class="navbar navbar-default" style=" z-index:100;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+              <div style="display: inline-block">
+                <img id="usrPhoto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+              </div>
+                <div id="slctdTchr" class="nodisplay" style="display: inline-block">
+                    <span id="chgSelected" style="cursor: pointer;">
+                        <span id="slctdTchrTxt"></span>
+                    </span>
+                </div>  
+            </div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="renderedNav" class="nav navbar-nav"></ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>  
+        <div id="novoca" style="margin-top: 30px; display: none; text-align: center;">Sorry! There is no crossword available.</div>
+        <div class="container-fluid" style="margin-top: 30px;">
+            <div  id="puzzle-wrapper" class="row">
+                <div id="puzzle-holder" class="col-lg-6 col-sm-6">
+
+                </div>
+                <div id="puzzle-hints" class="col-lg-6 col-sm-6">
+                    <h3 class="nodisplay">Across</h3>
+                    <ul id="across"></ul>
+                    <h3 class="nodisplay">Down</h3>
+                    <ul id="down"></ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/crossword.min.js"></script>
+    </body>
+</html>

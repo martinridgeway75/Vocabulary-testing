@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="google" content="notranslate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+		<title>Grammar Puzzle</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase-database.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script> -->
+    <script src="js/utils.min.js"></script>
+      <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+        <style>.btn.btn-sm.btn-whiteBlue {background-color: #fff; color: #333; border-color: #333;}</style>
+	</head>
+	<body id="page">
+      <nav class="navbar navbar-default" style=" z-index:100;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+              <div style="display: inline-block">
+                <img id="usrPhoto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+              </div>
+                <div id="slctdTchr" class="nodisplay" style="display: inline-block">
+                    <span id="chgSelected" style="cursor: pointer;">
+                        <span id="slctdTchrTxt"></span>
+                    </span>
+                </div>  
+            </div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="renderedNav" class="nav navbar-nav"></ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>  
+        <div class="container-fluid">
+            <div class="row text-center">    
+                <div class="col-lg-12">
+                    <div class="small"><em>Select the words in the correct order.</em><br><br></div>
+                    <div><strong><span id="arraycount">0</span> / <span id="arrayMax"></span></strong></div>
+                </div>
+            </div>
+            <div class="row text-center" style="margin-top:30px;">
+                <div class="col-lg-3"></div>
+                <div id="resultAnswer" class="col-lg-6" style="font-size:18;font-weight:700;min-height:20px;margin-bottom:20px;"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-3"></div>
+                <div id="sentence" class="col-lg-6" style="margin-bottom:20px;"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-3"></div>
+                <div id="resetQ" class="col-lg-6">
+                    <div id="nextQuestion" class="btn btn-sm btn-whiteBlue">Next sentence &gt;</div>
+                </div>
+            </div>
+        </div>
+<script type="text/javascript" src="js/grammarpuzzle.min.js"></script>
+</body>
+</html>

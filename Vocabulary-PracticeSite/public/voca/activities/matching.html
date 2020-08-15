@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="google" content="notranslate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+		<title>Synonym Matching</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase-database.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script> -->
+    <script src="js/utils.min.js"></script>
+      <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/matching.min.css" />
+	</head>
+	<body>
+<div id="page">
+      <nav class="navbar navbar-default" style=" z-index:100;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+              <div style="display: inline-block">
+                <img id="usrPhoto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+              </div>
+                <div id="slctdTchr" class="nodisplay" style="display: inline-block">
+                    <span id="chgSelected" style="cursor: pointer;">
+                        <span id="slctdTchrTxt"></span>
+                    </span>
+                </div>  
+            </div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="renderedNav" class="nav navbar-nav"></ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>  
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom: 10px;">
+          <div class="col-lg-12">  
+		      <div id="successMsg" class="col-lg-12 nodisplay" style="text-align: center;">
+            <h5 class="winner" style="margin-bottom: 10px"></h5>
+            <button id="restart" class="btn btn-sm btn-whiteBlue nodisplay">Reset</button>
+            <button id="continueGame" class="btn btn-sm btn-default nodisplay">Continue game...</button>
+		      </div> 
+          </div> 
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="whiteBlue small">
+                    <div class="text-center" style="margin: 0 5px;">
+                        <fieldset class="md-radio md-radio-inline">
+                            <input id="synCtx" name="scale" type="radio" value="syn" checked>
+                            <label for="synCtx">Synonyms</label>
+                            <input id="transCtx" name="scale" type="radio" value="trans">
+                            <label for="transCtx">Translations</label>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="noVoca" class="row text-center nodisplay" style="margin-top: 40px;">No vocabulary available!</div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3"></div>
+            <div class="col-lg-6 col-md-6">
+                <div id="content" class="row">
+                    <div id="cardPile" class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+                    <div id="cardSlots" class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.touch-punch.min.js"></script>    
+<script type="text/javascript" src="js/matching.min.js"></script>
+</body>
+</html>

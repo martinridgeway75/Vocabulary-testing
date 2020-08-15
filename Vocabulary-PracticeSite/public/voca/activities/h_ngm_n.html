@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="google" content="notranslate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+		<title>H_ngm_n</title>
+        <!-- TODO -->
+        <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+        <script defer src="/__path-to__/firebase-auth.js"></script>
+        <script defer src="/__path-to__/firebase-database.js"></script>
+        <script defer src="/__path-to__/firebase/init.js"></script> -->
+        <script src="js/utils.min.js"></script>
+      <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+        <style>.strikeOut {visibility: hidden;} .guess {margin-top: 20px;} .guess > div {font-size: 24px; font-weight: 700; margin: 5px; width: 36px; border: 1px solid; display: inline-block;} .nonVisible {visibility: hidden;} .btn.btn-xs.btn-whiteBlue.col-lg-1 {border-color: #959ea7; color: #333; background-color: #fff} h5 {margin: 12px 0 0 0;} .isWhitespace {height: 0;} .winner {display: inline-block; margin-right: 5px;} .guess.win > div {color: #fff; background-color: #337ab7; border-color: transparent; font-weight: 400;} .btn.btn-xs.btn-whiteBlue.col-lg-1 {font-size: 16px; padding: 5px;} @media screen and (max-width: 767px) { .guess > div {font-size: 18px; font-weight: 700; margin: 2px; width: 30px; border: 1px solid #2c3e50; display: inline-block;} }</style>
+	</head>
+	<body id="page">
+      <nav class="navbar navbar-default" style=" z-index:100;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <div style="display: inline-block">
+                  <img id="usrPhoto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+                </div>
+                <div id="slctdTchr" class="nodisplay" style="display: inline-block">
+                    <span id="chgSelected" style="cursor: pointer;">
+                        <span id="slctdTchrTxt"></span>
+                    </span>
+                </div>  
+            </div>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="renderedNav" class="nav navbar-nav"></ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>  
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-3"></div>
+                <div class="col-lg-6 col-md-6">
+                    <div id="mem-feedback" class="text-center" style="display: none;">
+                        <h5 class="winner">Complete! </h5>
+                        <button id="restart" class="btn btn-sm btn-whiteBlue">Reset</button>
+                    </div> 
+                </div> 
+            </div>
+            <div id="hangmanBox" class="guess text-center"></div>
+            <div id="hints" style="display: none;">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3"></div>
+                    <div class="col-lg-6 col-md-6"><h5 style="display: inline-block; padding-right: 5px;">Synonym:</h5><span id="synHint"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3"></div>
+                    <div class="col-lg-6 col-md-6"><h5 style="display: inline-block; padding-right: 5px;">Collocations:</h5><span id="colHint"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3"></div>
+                    <div class="col-lg-6 col-md-6"><h5 style="display: inline-block; padding-right: 5px;">Context:</h5><span id="ctxHint"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="kybd" class="row" style="margin-top: 20px;">
+                <div class="col-lg-3 col-md-3"></div>
+                <div class="col-lg-6 col-md-6" style="background-color: #F4F4F4; padding: 10px 0;">
+                    <div class="row">
+                    <div style="width: 8.333%; float: left; height: 10px;"></div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">q</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">w</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">e</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">r</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">t</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">y</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">u</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">i</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">o</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">p</div>
+                </div>
+                    <div class="row">
+                    <div style="width: 12.498%; float: left; height: 10px;"></div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">a</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">s</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">d</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">f</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">g</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">h</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">j</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">k</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">l</div>
+                </div>
+                    <div class="row">
+                    <div style="width: 16.667%; float: left; height: 10px;"></div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">z</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">x</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">c</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">v</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">b</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">n</div>
+                    <div class="btn btn-xs btn-whiteBlue col-lg-1 col-md-1 col-sm-1 col-xs-1">m</div>                    
+                </div>
+                </div>
+            </div>
+            <div class="row text-center" style="margin: 30px 0;">
+                <div id="nxtBtn" class="btn btn-sm btn-info" style="display: none;">next &raquo;</div>
+            </div>
+        </div>
+<script type="text/javascript" src="js/hangman.min.js"></script>
+</body>
+</html>

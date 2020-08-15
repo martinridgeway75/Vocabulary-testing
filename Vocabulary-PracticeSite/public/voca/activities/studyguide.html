@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="google" content="notranslate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+		<title>Study Guide</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script> -->
+    <script src="js/utils.min.js"></script>
+      <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+      <style> 
+        .exmplstudy {background-color:rgba(149,96,202,0.1); padding: 10px; margin-bottom: 20px; }
+        .exmplstudy > div:not(:last-child) {margin: 5px 0;}
+        .exmplstudy > div:first-child {margin-top: 0;}
+        .expand > span { padding: 5px 15px; }
+        .encircled { border: 1px solid; border-radius: 50%;  }
+        </style>
+	</head>
+	<body id="page">
+      <nav class="navbar navbar-default" style=" z-index:100;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+              <div style="display: inline-block">
+                <img id="usrPhoto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+              </div>
+                <div id="slctdTchr" class="nodisplay" style="display: inline-block">
+                    <span id="chgSelected" style="cursor: pointer;">
+                        <span id="slctdTchrTxt"></span>
+                    </span>
+                </div>  
+            </div>
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="renderedNav" class="nav navbar-nav"></ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>      
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 pad-bottom">
+             <div style="padding: 0 15px;">
+              <div class="text-center h4">PE4 Vocabulary Study Guide</div>
+              <div class="row"><strong>Task One:</strong><br>The synonym from the practice question is NOT on the exam!<br>- Search online to find the most common synonyms.</div class="row">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 exmplstudy">
+                  <div>EXAM EXAMPLE:</div>
+                  <div>1. It is a good idea to <span style="text-decoration: underline;">attain</span> new vocabulary.</div>
+                  <div class="expand">
+                    <span>a. ambitious</span><span>b. cold</span><span class="encircled">c. learn</span><span>d. friendly</span>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 exmplstudy">
+                  <div>PRACTICE EXAMPLE:</div>
+                  <div>1. We can use a dictionary to <span style="text-decoration: underline;">attain</span> new words.</span>.</div>
+                  <div class="expand">
+                    <span>a. fine</span><span>b. hot</span><span class="encircled">c. get</span><span>d. serious</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row"><strong>Task Three:</strong><br>The correct answer from the practice question is NOT the correct answer on the exam!<br>- Rewrite the practice question so that a different choice(option) becomes the correct answer.</div class="row">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 exmplstudy">
+                  <div>EXAM EXAMPLE:</div>
+                  <div>1. He often uses a dictionary for _____ new words.</div>
+                  <div class="expand">
+                    <span>a. attain</span>
+                    <span style="text-decoration: line-through;" >b. attained</span>
+                    <span>c. attains</span>
+                    <span>d. attaining</span>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 exmplstudy">
+                  <div>PRACTICE EXAMPLE:</div>
+                  <div>1. New vocabulary was _____ from the English class.</div>
+                  <div class="expand">
+                    <span>a. attain</span>
+                    <span class="encircled">b. attained</span>
+                    <span>c. attains</span>
+                    <span>d. attaining</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row"><strong>Task Four:</strong><br>The practice question collocations are NOT on the exam!<br>- Search online to find the three most common collocations.</div class="row">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 exmplstudy">
+                  <div>EXAM EXAMPLE:</div>
+                  <div>25.  attain _____</div>
+                  <div class="expand">
+                    <span>a. wait | back | scenario</span><span>b. scenario | wait | fortune</span>
+                  </div>
+                  <div class="expand">
+                    <span>c. peace | friends | back</span><span class="encircled">d. fortune | peace | friends</span>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 exmplstudy">
+                  <div>PRACTICE EXAMPLE:</div>
+                  <div>25.  attain _____</div>
+                  <div class="expand">
+                    <span>a. wealth | go | knowledge</span><span>b. go | find | lie</span>
+                  </div>
+                  <div class="expand">
+                    <span>c. lie | vocabulary | find</span><span class="encircled">d. knowledge | wealth | vocabulary</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row"><strong>All Tasks(1-5):</strong><br>There is only one definition in use for each of the vocabulary words on the exam!<br>- You only need to learn the definitions given to you from the context of the translations your teacher provides.</div class="row">
+             </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="js/studyguide.min.js"></script>
+</body>
+</html>

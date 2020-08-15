@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vocabulary Sign-in</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase-database.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script>
+    <script src="https://__path-to__/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://__path-to__/firebaseui.css" /> -->
+      <style>
+          /*fix the loading state of the card*/
+          .mdl-shadow--2dp {
+              box-shadow: none;
+          }
+          .firebaseui-info-bar {
+              margin-top: 20px;
+          }
+          div.mdl-progress::after {
+              display: block;
+              color: #62228C;
+              content: "Authenticating";
+              margin: 20px auto;
+              text-align: center;
+          }
+          .mdl-progress {
+              height: 5px;
+          }
+          
+          /*color purple?*/
+      </style>
+  </head>
+  <body>
+    <div class="container-fluid" style="margin-top: 30px;">
+      <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2 text-center"></div>
+            <div id="auth-holder" class="col-lg-6 col-md-6 col-sm-6 col-xs-8 text-center">
+                <h2 style="text-align: center;">Vocabulary</h2>
+                <div id="firebaseui-auth-container"></div>
+                <div style="text-align: center; margin-top: 60px;">
+                    <!-- TODO -->
+                    <a href="https://accounts.google.com/logout" target="_top" rel="noreferrer noopener" style="text-decoration: none;">Sign out of all accounts</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
+            
+        var ui,
+            uiConfig;
+        
+          ui = new firebaseui.auth.AuthUI(firebase.auth());          
+          uiConfig = {
+              callbacks: {
+                  signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+                      return true;
+                  }
+              },
+              signInFlow: "redirect",
+              signInSuccessUrl: '/voca/',
+              signInOptions: [
+                  firebase.auth.GoogleAuthProvider.PROVIDER_ID //TODO
+              ]
+              //immediateFederatedRedirect: true
+          };
+            
+          ui.start('#firebaseui-auth-container', uiConfig);
+
+
+      });  
+    </script>
+  </body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vocabulary</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase-database.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script> -->
+      <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+  </head>
+  <body>
+    <div id="showAtPrint"></div>
+<!--  -->    
+  <nav id="fullNav" class="navbar navbar-fixed-top navbar-default navbar-unslctd" style=" z-index:100;">
+    <div class="nav navbar-nav" style="float: left;">
+      <div class="navbar-form">
+        <img id="usrPhoto" class="pull-left" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+          <div class="navbar-text">PE4 Vocabulary</div>
+          <select id="examType" class="form-control navSelect nodisplay">
+            <option value="0" selected="true" disabled>...</option>
+            <option value="MIDTERM">MIDTERM</option>
+            <option value="FINAL">FINAL</option>
+          </select>
+          <div id="spanB4examVersion" class="navbar-text nodisplay" style="margin-right: 5px;">v.</div>
+          <input id="examVersion" type="number" value="" min="1" max="99" maxlength="2" class="form-control inputNum nodisplay" placeholder="..." />
+          <div id="currentDate" class="navbar-text nodisplay"></div>
+      </div>
+    </div>
+    <ul class="nav navbar-nav"> 
+      <li id="screenButtons" class="nodisplay">
+        <a href="#" rel="noreferrer noopener" class="btn-whitePurple pull-right" data-func="gen">GENERATE</a>
+        <a href="#" rel="noreferrer noopener" class="btn-whitePurple pull-right" data-func="prv">PREVIOUS TESTS</a>
+      </li>
+      <li><a href="practice.html" target="_parent" class="btn-whitePink pull-right">ONLINE PRACTICE</a></li>
+      <li><a id="logout" href="#" rel="noreferrer noopener" class="icon-logout-1 pull-right"></a></li>
+    </ul>
+  </nav>
+<!--  -->
+  <div id="welcomeMsg" class="container-fluid nodisplay" style="margin-top: 60px;"></div>
+<!--  -->
+  <div id="fullRequest" class="container-fluid nodisplay" style="margin-top: 60px;">
+    <div class="row">
+      <div id="awaitingBucket" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        <div class="text-center" style="margin-bottom: 2px;">Awaiting moderation:</div>
+        <div id="pendingList"></div>
+        <div id="currentVocaErrorsHdr" class="nodisplay text-center" style="margin-bottom: 2px;">Exam vocabulary:</div>
+        <div id="currentVocaErrors" class="nodisplay"></div>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-center">
+              <span id="clearLoadedPendingWord" class="btn btn-default" style="margin-top: -5px;">Clear</span>
+              <span class="h4">TARGET WORD: </span>
+              <input id="newTargetWord" type="text" class="form-control" />
+              <span class="h4">Book unit: </span>
+              <input id="newTargetBkUnit" type="number" value="" min="1" max="99" maxlength="2" class="form-control inputBkUnit" placeholder="..." />
+              <a href="studyguide.html" target="_blank" class="btn btn-default pull-right">View study guide</a>
+            </div>
+          </div>
+        </div>
+        <div id="errorInfo" class="row padT20"></div>
+        <div class="row padT20">            
+            <div class="col-lg-12">
+              <div id="modSynAllowTsk" class="bigEfgChkbx pull-left"></div>
+              <div class="h4" style="margin-top: 0;">Task One<br>
+                <div class="h5">Choose the <span style="font-weight: 700;color: #7A2AAF;">best definition</span> of the <u>underlined</u> word.</div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-12 tskDivider"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 small">EXAM</div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 small">PRACTICE</div>
+                <div id="requestSyn-exam">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 expand padB6">
+                      <div class="expand padB10 exmplInput"><input class="newExmpl" type="text" />&nbsp;&nbsp;<span id="nTgt0" style="text-decoration: underline;"></span>&nbsp;&nbsp;<input class="newExmpl" type="text" /></div>
+                      <div class="padL10R10">
+                          <div>a.&nbsp;<input type="text" /></div>
+                          <div>b.&nbsp;<input type="text" /></div>
+                      </div>
+                      <div class="padL10R10">
+                        <div>c.&nbsp;<input type="text" /></div>
+                        <div class="reqSyn0"><span>d.</span>&nbsp;<input type="text" /></div>
+                    </div>
+                  </div>
+              </div>
+              <div id="requestSyn-practice">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 expand padB6"> 
+                  <div class="expand padB10 exmplInput"><input class="newExmpl" type="text" />&nbsp;&nbsp;<span id="nTgt1" style="text-decoration: underline;"></span id="nTgt1">&nbsp;&nbsp;<input class="newExmpl" type="text" /></div>
+                    <div class="padL10R10">
+                        <div>a.&nbsp;<input type="text" /></div>
+                        <div>b.&nbsp;<input type="text" /></div>
+                    </div>
+                    <div class="padL10R10">
+                      <div>c.&nbsp;<input type="text" /></div>
+                      <div class="reqSyn0"><span>d.</span>&nbsp;<input type="text" /></div><br>
+                      <div><span class="small koreanTxt">단어 정의:</span> <input id="koreanDef" class="koreanInput" type="text" /></div>
+                      <!-- <div><span class="small koreanTxt">예제 문장:</span> <input id="koreanExmpl" class="koreanInput longInput" type="text" /></div> -->
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row padT20">
+        <div class="col-lg-12">
+              <div id="modGmrAllowTsk" class="bigEfgChkbx pull-left"></div>
+          <div class="h4" style="margin-top: 0;">Task Three<br>
+            <div class="h5">Choose the <span style="font-weight: 700;color: #7A2AAF;">correct</span> grammar <span style="font-weight: 700;color: #7A2AAF;">form</span> to complete each sentence.</div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12 tskDivider"></div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 small">EXAM</div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 small">PRACTICE</div>
+            <div id="requestGmr-exam">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 expand padB6">
+                  <div class="expand padB10 exmplInput"><input class="newExmpl" type="text" />&nbsp;&nbsp;_______&nbsp;&nbsp;<input class="newExmpl" type="text" /></div>
+                  <div class="padL10R10">
+                      <div>a.&nbsp;<input id="nTgt2" type="text" value="" disabled /></div>
+                      <div>b.&nbsp;<input id="nGmrTgt0" type="text" /></div>
+                  </div>
+                  <div class="padL10R10">
+                    <div>c.&nbsp;<input id="nGmrTgt1" type="text" /></div>
+                    <div class="reqGmr0"><span>d.</span>&nbsp;<input id="nGmrTgt2" type="text" /></div>
+                </div>
+              </div>
+          </div>
+          <div id="requestGmr-practice">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 expand padB6">
+                <div class="expand padB10 exmplInput"><input class="newExmpl" type="text" />&nbsp;&nbsp;_______&nbsp;&nbsp;<input class="newExmpl" type="text" /></div>
+                <div class="padL10R10">
+                    <div>a.&nbsp;<input id="pGmrTgt2" type="text" disabled /></div>
+                    <div>b.&nbsp;<input id="pGmrTgt1" type="text" disabled /></div>
+                </div>
+                <div class="padL10R10">
+                  <div>c.&nbsp;<input id="pGmrTgt0" type="text" disabled /></div>
+                  <div class="reqGmr0"><span>d.</span>&nbsp;<input  id="nTgt3" type="text" value="" disabled /></div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>       
+   <div class="row padT20">
+    <div class="col-lg-12">
+      <div id="modColAllowTsk" class="bigEfgChkbx pull-left"></div>
+      <div class="h4" style="margin-top: 0;">Task Four<br>
+        <div class="h5">Choose the <span style="font-weight: 700;color: #7A2AAF;">three strongest</span> collocates:<input type="radio" id="colPos0" name="colDrone" value="b4" style="margin: 0 2px 0 6px;"><label for="colPos0">before</label><input type="radio" id="colPos1" name="colDrone" value="af" style="margin: 0 2px 0 6px;" checked><label for="colPos1" style="margin-right: 6px;">after</label> the given word. <span id="allColDistractors" class="btn btn-xs btn-default pull-right">Distractors currently in use</span></div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-12 tskDivider"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 small">EXAM</div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 small">PRACTICE</div>
+        <div id="requestCol-exam">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 expand padB6">
+              <div class="expand padB10 exmplInput"><span> _______ </span><span id="nTgt4" class="pull-left"></span></div>
+              <div class="padL10R10 reqColx">
+                  <div>x.&nbsp;<input type="text" /></div>
+                  <div>x.&nbsp;<input type="text" /></div>
+                  <div>x.&nbsp;<input type="text" /></div>
+              </div>
+              <div class="padL10R10 reqCol0">
+                <div><span>o.</span>&nbsp;<input type="text" /></div>
+                <div><span>o.</span>&nbsp;<input type="text" /></div>
+                <div><span>o.</span>&nbsp;<input type="text" /></div>
+            </div>
+          </div>
+      </div>
+      <div id="requestCol-practice">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 expand padB6">
+            <div class="expand padB10 exmplInput"><span> _______ </span><span id="nTgt5" class="pull-left"></span></div>
+            <div class="padL10R10 reqColx">
+              <div>x.&nbsp;<input type="text" /></div>
+              <div>x.&nbsp;<input type="text" /></div>
+              <div>x.&nbsp;<input type="text" /></div>
+          </div>
+          <div class="padL10R10 reqCol0">
+            <div><span>o.</span>&nbsp;<input type="text" /></div>
+            <div><span>o.</span>&nbsp;<input type="text" /></div>
+            <div><span>o.</span>&nbsp;<input type="text" /></div>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--  -->
+<div id="reqAllColDistractors" class="container-fluid nodisplay" style="margin-top: 60px;">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="text-center" style="margin: 20px 0;">
+        <span class="h4">Collocation distractors currently in use:</span>
+        <span id="loadSelectedColDis" class="btn btn-default" style="margin-top: -5px;">Load selected</span>
+        <span id="exitColDisDiv" class="btn btn-default" style="margin-top: -5px;">Exit</span>
+      </div>
+    </div>
+  </div>
+  <div id="reqSectionAllCols"></div>
+</div>
+<!--  -->
+<div id="fullPrevious" class="container-fluid nodisplay" style="margin-top: 60px;">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="previousExamsContainer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div id="fullVocaLists" class="container-fluid nodisplay" style="margin-top: 60px;">
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div id="foo-filters"></div>
+                  <div id="newVocaBtn" class="btn btn-xs btn-default pull-right">Request new vocabulary</div>
+                </div>
+              </div>
+              <div class="row">
+                <div id="cls-filters" class="col-lg-12"></div>
+              </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+          <div class="row">
+           <div class="col-lg-12">
+            <!-- <div class="btn btn-xs btn-default pull-right">Request new text</div> -->
+           </div>
+         </div>
+    </div>
+      </div>
+      <div class="row">
+          <div id="tsks1To4Divs" class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+            <div class="row">
+              <div class="col-lg-12">
+                <ul id="foo"></ul>
+              </div>
+            </div>
+            <div id="canPreviewDiv" class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="reOrderTskbox text-center"><button id="rTbar" class="btn btn-xs btn-default">Randomize order</button></div>
+                <div><span class="h4">I </span><span class="small">- 8 synonyms</span></div>
+                <ol id="bar" data-task="syn"></ol>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="reOrderTskbox text-center"><button id="rTbaz" class="btn btn-xs btn-default">Randomize order</button></div>
+                <div class="text-center small" style="color: #cc0000;">Be aware of multiple answers!</div>
+                <div><span class="h4">II (i) </span><span class="small">- 4 sentences</span></div>
+                <ol id="baz" data-task="syn"></ol>
+                <div><span class="h4">II (ii) </span><span class="small">- 4 sentences</span></div>
+                <ol id="baz2" data-task="syn"></ol>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="reOrderTskbox text-center"><button id="rTurbaz" class="btn btn-xs btn-default">Randomize order</button></div>
+                <div><span class="h4">III </span><span class="small">- 8 grammar</span></div>
+                <ol id="urbaz" data-task="gmr"></ol>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="reOrderTskbox text-center"><button id="rTcolin" class="btn btn-xs btn-default">Randomize order</button></div>
+                <div><span class="h4">IV </span><span class="small">- 8 collocations</span></div>
+                <ol id="colin" data-task="col"></ol>
+              </div>
+            </div>
+          </div>
+          <div id="tsk5Divs" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div class="row">
+              <div class="col-lg-12">
+                <ul id="foo2"></ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div><span class="h4">V </span><span class="small">- 1 comprehension</span></div>
+                <ol id="bop"></ol>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5"></div>
+        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+          <div class="expand padB6">
+            <input type="text" id="errorFbk" class="errorFeedback nodisplay" value="" placeholder="Please describe the error briefly..." />
+            <div id="errorFbkCancel" class="btn btn-xs btn-default pull-right nodisplay">Cancel</div>
+            <div id="reportError" class="btn btn-xs btn-default pull-right">Report error</div>
+          </div>          
+          <div id="previewExmplsContainer">
+            <div id="previewExamExmpl"></div>
+            <div id="previewPracticeExmpl"></div>
+          </div>
+        </div>
+      </div>
+</div>
+<!--  -->
+<div id="fullLayout" class="nodisplay" style="margin-top: 60px;">
+<div id="previewPg1" class="container-fluid page-break"> 
+  <div class="row">  
+      <div id="printareaA" class="col-lg-6 col-md-6 insetcolumnL">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="h4">Task One<br>
+              <span class="h5">Choose the best definition of the <u>underlined</u> word.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 expand">
+              <div class="pull-left padB10"></div>
+              <div class="answergridhead text-center">ANSWER</div>
+          </div>
+        </div>
+        <div id="rendertsk1"></div>
+<div class="row">
+  <div class="col-lg-12 expand">
+      <div class="h4">Task Two (i)
+        <br>
+        <span class="h5">Choose a correct word to complete each sentence. CHOOSE EACH WORD ONCE.</span>
+        <br>
+        <span class="text-center small hidden-print" style="color: #cc0000;">Be aware of multiple answers!</span>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 expand">
+      <div id="task2aOptBox" class="expand boxedanswers"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 expand">
+      <div class="pull-left padB10"></div>
+      <div class="answergridhead text-center">ANSWER</div>
+  </div>
+</div>
+<div id="rendertsk2a"></div>
+</div>
+<div id="printareaB" class="col-lg-6 col-md-6 insetcolumnR">
+  <div class="row">
+    <div class="col-lg-12 expand">
+        <div class="h4">Task Two (ii)
+          <br>
+          <span class="h5">Choose a correct word to complete each sentence. CHOOSE EACH WORD ONCE.</span>
+          <br>
+          <span class="text-center small hidden-print" style="color: #cc0000;">Be aware of multiple answers!</span>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 expand">
+        <div id="task2bOptBox" class="expand boxedanswers"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 expand">
+        <div class="pull-left padB10"></div>
+        <div class="answergridhead text-center">ANSWER</div>
+    </div>
+  </div>
+<div id="rendertsk2b"></div>
+<div class="row">
+  <div class="col-lg-12 expand">
+      <div class="h4 pull-left">Task Three
+        <br>
+        <span class="h5">Choose the correct grammar form to complete each sentence.</span>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 expand">
+      <div class="pull-left padB10"></div>
+      <div class="answergridhead text-center">ANSWER</div>
+  </div>
+</div>
+<div id="rendertsk3"></div>
+</div>
+</div>
+</div>
+  <div id="previewPg2" class="container-fluid">
+  <div class="row">
+     <div class="col-lg-12 expand">
+       <div class="headerdiv"></div>
+     </div>      
+  </div>  
+  <div class="row"> 
+  <div id="printareaC" class="col-lg-6 col-md-6 insetcolumnL">
+  <div class="row">
+          <div class="col-lg-12 expand">
+              <div class="h4 pull-left">Task Four
+                <br>
+                <span class="h5">Choose the three strongest collocates to the given word.</span>
+              </div>
+          </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 expand">
+        <div class="pull-left padB10"></div>
+        <div class="answergridhead text-center">ANSWER</div>
+    </div>
+  </div>
+
+<div id="rendertsk4"></div>
+</div>
+<div id="printareaD" class="col-lg-6 col-md-6 insetcolumnR">
+  <div class="row">
+      <div class="col-lg-12 expand">
+          <div class="h4 pull-left">Task Five
+            <br>
+            <span class="h5">Read the text below and answer the questions that follow.</span>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-lg-12 expand">
+          <div class="expand boxedanswers small">
+              <span id="task5OptBox"></span>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 expand">
+        <div class="pull-left padB10"></div>
+        <div class="answergridhead text-center">ANSWER</div>
+    </div>
+  </div>
+<div id="rendertsk5"></div> 
+</div>            
+</div>     
+</div>
+</div>
+  <script src="js/pdfmake.min.js"></script>
+  <script src="js/vfs_fonts.js"></script>
+  <script src="js/tg1Libs.js"></script>
+  <script src="js/tg1.min.js"></script>
+  </body>
+</html>

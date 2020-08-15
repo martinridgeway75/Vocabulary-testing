@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vocabulary</title>
+    <!-- TODO -->
+    <!-- <script defer src="/__path-to__/firebase-app.js"></script>
+    <script defer src="/__path-to__/firebase-auth.js"></script>
+    <script defer src="/__path-to__/firebase-database.js"></script>
+    <script defer src="/__path-to__/firebase/init.js"></script> -->
+      <link rel="stylesheet" href="css/twbs3.3.4.min.css" />
+      <style>
+      .pinkbg {border-left: 6px solid #fff; background-color: rgba(149,96,202,0.1); padding: 0;}
+      .pinkbg:first-child {border-left: none;}
+      .pink2bg {background-color: rgba(149,96,202,0.2); padding: 0;}
+      #fullClassLists ul {margin: 0; padding: 2px 0; min-height: 80px;}
+      #classBuckets ul > li {width: 100%; margin-bottom: 1px;}
+            /* Removes the clear button from date inputs */
+            input[type="date"]::-webkit-clear-button { display: none; } 
+            /* Removes the spin button */ 
+            input[type="date"]::-webkit-inner-spin-button { display: none; }
+            /* Always display the drop down caret */
+            input[type="date"]::-webkit-calendar-picker-indicator { color: #000; }
+            /* A few custom styles for date inputs */
+            input[type="date"] {
+                appearance: none;
+                -webkit-appearance: none;
+                color: #95a5a6;
+                font-family: "Helvetica", arial, sans-serif;
+                width: 80px;
+                border:1px solid #fff;
+                background:#fff;
+                font-size: 11px;
+                margin-left:5px;
+                display: inline-block !important;
+                visibility: visible !important;
+            }
+            input[type="date"], focus {
+                color: #95a5a6;
+                box-shadow: none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+            }
+            span.btn.btn-default.pvR-btn, span.btn.btn-default.pvR1-btn {color: #cc0000; margin-left: 6px; border: none;}
+            span.btn.btn-default.pvR-btn:hover, span.btn.btn-default.pvR1-btn:hover { color: #fff; background-color: #cc0000; }
+            span.btn.btn-default.pvR1-btn {margin-top: 3px;}
+            .caret { margin-left: 0; margin-right: 5px; border-top: 8px dashed; border-right: 6px solid transparent; border-left: 6px solid transparent;}
+            .caret.collapsed { vertical-align: top; margin-left: 0; margin-right: 5px; border-bottom: 8px dashed; border-top-color: transparent; border-right: 6px solid transparent; border-left: 6px solid transparent;}
+            .caret:hover { cursor: pointer; }
+            @media screen and (-webkit-min-device-pixel-ratio: 0) {
+              input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"] {
+                line-height: inherit;
+              }}
+            div#classBuckets > div { border-left: 1px solid #333; }
+            ul#foo3 { max-height: 500px; overflow-y: auto; overflow-x: hidden; border-right: 1px solid #333;}
+            ul#foo4 { min-height: 30px; border-bottom: 1px solid #333;  padding-bottom: 10px; }
+            .sortable-selected {color: #fff; background-color:rgba(149,96,202,0.7);}
+            div#foo3-filters {display: inline-block;}
+            div#foo3-filters > label {padding: 0 10px 0 3px; font-weight: 400;}
+      </style>
+  </head>
+  <body>
+    <div id="showAtPrint"></div>
+<!--  -->    
+  <nav id="fullNav" class="navbar navbar-fixed-top navbar-default navbar-unslctd" style=" z-index:100;">
+    <div class="nav navbar-nav" style="float: left;">
+      <div class="navbar-form">
+        <img id="usrPhoto" class="pull-left" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="30" height="30" />
+          <div class="navbar-text">PE4 Vocabulary</div>
+          <div id="currentDate" class="navbar-text nodisplay"></div>
+      </div>
+    </div>
+    <ul class="nav navbar-nav"> 
+      <li id="screenButtons" class="nodisplay">
+        <a href="#" rel="noreferrer noopener" class="btn-whitePurple pull-right" data-func="oxt">TEST GENERATOR</a>
+        <a href="#" rel="noreferrer noopener" class="btn-whitePurple pull-right" data-func="olp">UPDATE ONLINE CLASSES</a>
+      </li>
+      <li><a id="logout" href="#" rel="noreferrer noopener" class="icon-logout-1 pull-right"></a></li>
+    </ul>
+  </nav>
+<!--  -->
+<div id="fullClassLists" class="container-fluid" style="margin-top: 60px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="foo3-filters"></div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="small" style="border-bottom: 1px solid #333; margin: 10px 0;">Task V</div>
+              <ul id="foo4"></ul>
+            </div>
+          </div>
+          <div class="row">
+                <div class="col-lg-12">
+                  <ul id="foo3"></ul>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h4>Classes online</h4>
+             </div>
+            <div class="col-lg-12">
+              <div id="classBuckets"></div>
+            </div>
+            <div class="col-lg-12 text-center">
+              <div id="addNewClssBtn" class="btn btn-sm btn-default nodisplay">Add new class</div>
+            </div>
+         </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 40px;">
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5"></div>
+        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+          <div class="expand padB6">
+            <input type="text" id="errorFbk" class="errorFeedback nodisplay" value="" placeholder="Please describe the error briefly..." />
+            <div id="errorFbkCancel" class="btn btn-xs btn-default pull-right nodisplay">Cancel</div>
+            <div id="reportError" class="btn btn-xs btn-default pull-right">Report error</div>
+          </div>          
+          <div id="previewExmplsContainer">
+            <div id="previewExamExmpl"></div>
+            <div id="previewPracticeExmpl"></div>
+          </div>
+        </div>
+      </div>
+</div>
+  <script src="js/tg1Libs.js"></script>
+  <script src="js/pv1.min.js"></script>
+  </body>
+</html>
