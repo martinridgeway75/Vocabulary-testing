@@ -129,557 +129,65 @@
             },
             "practice" : {
               "q1" : {
-                "ans" : "The sale will be amazing.",
-                "dis1" : "*spectacular* is a brand name.",
-                "dis2" : "The sale is today.",
-                "dis3" : "The department store is opening soon.",
-                "qstn" : "Choose the TRUE statement:"
+                "ans" : "fullAnswer",
+                "dis1" : "uniqueDistractor",
+                "dis2" : "uniqueDistractor",
+                "dis3" : "uniqueDistractor",
+                "qstn" : "question"
               },
               "q2" : {
-                "ans" : "needed",
-                "dis1" : "optional",
-                "dis2" : "coming soon",
-                "dis3" : "pleasant",
-                "qstn" : "In the text above, the word *essential* is closest in meaning to:"
+                "ans" : "fullAnswer",
+                "dis1" : "uniqueDistractor",
+                "dis2" : "uniqueDistractor",
+                "dis3" : "uniqueDistractor",
+                "qstn" : "question:"
               },
               "q3" : {
-                "ans" : "The sale is happening once every year.",
-                "dis1" : "The sale is for computers.",
-                "dis2" : "The sale is not happening this year.",
-                "dis3" : "This is the final sale.",
-                "qstn" : "Which of the following statements is TRUE?"
+                "ans" : "fullAnswer",
+                "dis1" : "uniqueDistractor",
+                "dis2" : "uniqueDistractor",
+                "dis3" : "uniqueDistractor",
+                "qstn" : "question"
               },
               "q4" : {
-                "ans" : "sign up",
-                "dis1" : "time",
-                "dis2" : "prepare",
-                "dis3" : "buy",
-                "qstn" : "In the text above, the word *register* is closest in meaning to:"
+                "ans" : "fullAnswer",
+                "dis1" : "uniqueDistractor",
+                "dis2" : "uniqueDistractor",
+                "dis3" : "uniqueDistractor",
+                "qstn" : "question:"
               },
               "q5" : {
-                "ans" : "It has a good mood.",
-                "dis1" : "The workers suffer from stress.",
-                "dis2" : "The workplace is very busy.",
-                "dis3" : "The business makes keys.",
-                "qstn" : "What does the speaker say about the business’s workplace?"
+                "ans" : "fullAnswer",
+                "dis1" : "uniqueDistractor",
+                "dis2" : "uniqueDistractor",
+                "dis3" : "uniqueDistractor",
+                "qstn" : "question?"
               },
               "q6" : {
-                "ans" : "It tries hard to make workers feel relaxed.",
-                "dis1" : "It wants to give workers a vacation.",
-                "dis2" : "The workers are fighting too much.",
-                "dis3" : "It will buy a new building.",
-                "qstn" : "How does the speaker describe what the business is doing for the workers?"
+                "ans" : "fullAnswer",
+                "dis1" : "uniqueDistractor",
+                "dis2" : "uniqueDistractor",
+                "dis3" : "uniqueDistractor",
+                "qstn" : "question"
               },
               "q7" : {
-                "ans" : "devotion",
-                "dis1" : "paying for",
-                "dis2" : "production",
-                "dis3" : "making",
-                "qstn" : "In the text above, the word *dedicated* is closest in meaning to:"
+                "ans" : "fullAnswer",
+                "dis1" : "uniqueDistractor",
+                "dis2" : "uniqueDistractor",
+                "dis3" : "uniqueDistractor",
+                "qstn" : "question"
               },
               "q8" : {
-                "ans" : "The business is successful.",
-                "dis1" : "The workers are lazy.",
-                "dis2" : "Customers enjoy visiting this place.",
-                "dis3" : "It is hard to be comfortable at work.",
-                "qstn" : "According to the text..."
+                "ans" : "fullAnswer",
+                "dis1" : "uniqueDistractor.",
+                "dis2" : "uniqueDistractor",
+                "dis3" : "uniqueDistractor.",
+                "qstn" : "question"
               },
-              "txtPrt1" : "Murray’s department store is pleased to announce that our spectacular sale is now being held on an annual basis! It is essential to register one week before the start of the sale, as participation is being limited to 500 people.",
-              "txtPrt2" : "Our firm is dedicated to providing a comfortable, stress-free setting for our workers. We believe that having a happy place of work is the key to making us so competitive in business."
+              "txtPrt1" : "uniqueParagraphOfTextThatRelatesToQ1-4",
+              "txtPrt2" : "uniqueParagraphOfTextThatRelatesToQ5-8"
             },
-            "tgts" : [ "annual", "register", "essential", "spectacular", "setting", "dedicated", "firm", "competitive" ]
-          },
-          "-LocutusOfBorg1_01" : {
-            "ctx" : "Radio news",
-            "exam" : {
-              "q1" : {
-                "ans" : "For a short time, traffic will be slow.",
-                "dis1" : "Traffic will be slow for one week.",
-                "dis2" : "Traffic will be slow in Busan.",
-                "dis3" : "No traffic is allowed on highway 45.",
-                "qstn" : "Choose the TRUE statement:"
-              },
-              "q2" : {
-                "ans" : "happened",
-                "dis1" : "known",
-                "dis2" : "started",
-                "dis3" : "reported",
-                "qstn" : "In the text above, the word *occurred* is closest in meaning to:"
-              },
-              "q3" : {
-                "ans" : "The advice is about safety.",
-                "dis1" : "People from Daegu must be careful.",
-                "dis2" : "Drivers should take a different road.",
-                "dis3" : "It is about having a good vacation.",
-                "qstn" : "Which of the following is TRUE about the announcement?"
-              },
-              "q4" : {
-                "ans" : "enjoyable",
-                "dis1" : "noted",
-                "dis2" : "long",
-                "dis3" : "safe",
-                "qstn" : "In the text above, the word *memorable* is closest in meaning to:"
-              },
-              "q5" : {
-                "ans" : "Slow down near the accident.",
-                "dis1" : "Drive on the side of the road.",
-                "dis2" : "Use a different road today.",
-                "dis3" : "Speed up after the accident site.",
-                "qstn" : "What does the speaker say about driving on highway 45 today?"
-              },
-              "q6" : {
-                "ans" : "Look around and concentrate.",
-                "dis1" : "Turn on your lights.",
-                "dis2" : "Listen to the radio for more news.",
-                "dis3" : "Go and look at the accident.",
-                "qstn" : "How does the speaker describe how to drive responsibly?"
-              },
-              "q7" : {
-                "ans" : "really bad",
-                "dis1" : "cut in half",
-                "dis2" : "poor",
-                "dis3" : "many",
-                "qstn" : "In the text above, the word *severe* is closest in meaning to:"
-              },
-              "q8" : {
-                "ans" : "...that all safety belts are closed well.",
-                "dis1" : "...that you have a safety belt.",
-                "dis2" : "...that your passengers are sitting.",
-                "dis3" : "The speaker only says to be careful.",
-                "qstn" : "During the announcement, what does the speaker ask drivers to check?"
-              },
-              "txt" : "Good afternoon listeners.  This is the Channel Seven traffic report for Friday.  Traffic along highway 45, between Daegu and Busan has slowed temporarily on each side of the road where a serious accident has occurred.  Damage to the vehicles was so severe, special equipment had to be used to open the doors.  Two people were taken to hospital.   Channel Seven is advising travelers to drive cautiously. Drivers please reduce your speed and ensure that all passengers have had their seatbelts adequately fastened.  Remember – be attentive and drive responsibly, so you can enjoy a memorable summer vacation with your loved ones."
-            },
-            "practice" : {
-              "q1" : {
-                "ans" : "The storm was very bad.",
-                "dis1" : "A tree was hit by lightning.",
-                "dis2" : "The storm started at 3am.",
-                "dis3" : "Two cars had an accident last night.",
-                "qstn" : "Choose the TRUE statement:"
-              },
-              "q2" : {
-                "ans" : "for the moment",
-                "dis1" : "tomorrow",
-                "dis2" : "terrible",
-                "dis3" : "suddenly",
-                "qstn" : "In the text above, the word *temporarily* is closest in meaning to:"
-              },
-              "q3" : {
-                "ans" : "The tree fell in the early morning.",
-                "dis1" : "A power line was cut by electricians.",
-                "dis2" : "The tree cannot be saved.",
-                "dis3" : "The electricians are not talking.",
-                "qstn" : "Which of the following statements is TRUE?"
-              },
-              "q4" : {
-                "ans" : "careful",
-                "dis1" : "bravely",
-                "dis2" : "hard",
-                "dis3" : "quickly",
-                "qstn" : "In the text above, the word *cautiously* is closest in meaning to:"
-              },
-              "q5" : {
-                "ans" : "Listening makes us interested.",
-                "dis1" : "Our brains become smaller.",
-                "dis2" : "The lesson becomes stressful.",
-                "dis3" : "We believe that we are bored by the lesson.",
-                "qstn" : "What does the speaker say about the *trick*?"
-              },
-              "q6" : {
-                "ans" : "We remember content easily.",
-                "dis1" : "Our memory gets quicker.",
-                "dis2" : "We can relax.",
-                "dis3" : "The quality of the content improves.",
-                "qstn" : "How does the speaker describe what happens when we are active in a class?"
-              },
-              "q7" : {
-                "ans" : "enough",
-                "dis1" : "happy",
-                "dis2" : "passive",
-                "dis3" : "bored",
-                "qstn" : "In the text above, the word *adequately* is closest in meaning to:"
-              },
-              "q8" : {
-                "ans" : "Listening makes us feel less bored.",
-                "dis1" : "Classes are stressful and boring.",
-                "dis2" : "Classes get smaller when we listen.",
-                "dis3" : "Daydreaming makes it more interesting.",
-                "qstn" : "According to the text..."
-              },
-              "txtPrt1" : "Last night a severe storm temporarily cut power to the city. A tree fell over during the storm and knocked out a main power line. The accident occurred around 3am. Electricians are cautiously trying to remove the tree as we speak.",
-              "txtPrt2" : "Why is it important to be attentive in class? Being attentive can trick our brains into becoming interested in the lesson and this can reduce our boredom or stress. When we are adequately engaged in a class, the content becomes memorable and time passes more quickly than if we had just sat back and daydreamed."
-            },
-            "tgts" : [ "temporarily", "occurred", "severe", "cautiously", "reduce", "adequately", "attentive", "memorable" ]
-          },
-          "-LocutusOfBorg1_02" : {
-            "ctx" : "Movie trailer",
-            "exam" : {
-              "q1" : {
-                "ans" : "The storm was interesting but scary.",
-                "dis1" : "The storm was cold and rainy.",
-                "dis2" : "The hunters had a lot of equipment.",
-                "dis3" : "Lightning destroyed the equipment.",
-                "qstn" : "Choose the TRUE statement:"
-              },
-              "q2" : {
-                "ans" : "does not stop",
-                "dis1" : "very bad",
-                "dis2" : "a lot of energy",
-                "dis3" : "no chance",
-                "qstn" : "In the text above, the word *unrelenting* is closest in meaning to:"
-              },
-              "q3" : {
-                "ans" : "The villagers are scared of the monster.",
-                "dis1" : "The villagers are sleepy.",
-                "dis2" : "The monster is active in the village.",
-                "dis3" : "The hunters live outside the village.",
-                "qstn" : "Which of the following statements is TRUE?"
-              },
-              "q4" : {
-                "ans" : "lose",
-                "dis1" : "find",
-                "dis2" : "success",
-                "dis3" : "be scared",
-                "qstn" : "In the text above, the word *succumb* is closest in meaning to:"
-              },
-              "q5" : {
-                "ans" : "It was sad and bad luck.",
-                "dis1" : "The monster was the killer.",
-                "dis2" : "Both hunters loved that person.",
-                "dis3" : "It is the reason to find the monster.",
-                "qstn" : "What does the speaker say about the death of the main love interest?"
-              },
-              "q6" : {
-                "ans" : "intelligent and smart",
-                "dis1" : "tough and strong",
-                "dis2" : "quick and fast",
-                "dis3" : "angry and fighting",
-                "qstn" : "How does the speaker describe the hunter's skills?"
-              },
-              "q7" : {
-                "ans" : "highly skilled",
-                "dis1" : "best",
-                "dis2" : "practising",
-                "dis3" : "old and tough",
-                "qstn" : "In the text above, the word *proficient* is closest in meaning to:"
-              },
-              "q8" : {
-                "ans" : "We do not know who will win.",
-                "dis1" : "The hunters will win against the monster.",
-                "dis2" : "The monster escapes.",
-                "dis3" : "Nobody wins.",
-                "qstn" : "According to the trailer..."
-              },
-              "txt" : "Somewhere deep in the forests of Nova Scotia lurks a monster.  Tired of being afraid, the local community asks two very proficient hunters to team up in an attempt to put a stop to the beast’s activities in the area. After a spectacular storm destroys most of their equipment - after unrelenting attacks by the monster - and even with the unfortunate death of the main love interest – the men still need to find a way to defeat the monster using only their astute survival skills. Will they succeed? Will the village will be destroyed? Will they succumb to the chaos that the monster has created?"
-            },
-            "practice" : {
-              "q1" : {
-                "ans" : "The citizens worked hard to raise money.",
-                "dis1" : "The citizens will build the library",
-                "dis2" : "The citizens are tired.",
-                "dis3" : "The government paid for a new library.",
-                "qstn" : "Choose the TRUE statement:"
-              },
-              "q2" : {
-                "ans" : "without rest",
-                "dis1" : "place to live",
-                "dis2" : "tired",
-                "dis3" : "city",
-                "qstn" : "In the text above, the word *unrelenting* is closest in meaning to:"
-              },
-              "q3" : {
-                "ans" : "The engineers are very good at their job.",
-                "dis1" : "The engineers start work tomorrow.",
-                "dis2" : "The citizens are also engineers.",
-                "dis3" : "The town center is broken.",
-                "qstn" : "Which of the following statements is TRUE?"
-              },
-              "q4" : {
-                "ans" : "wonderful",
-                "dis1" : "extra",
-                "dis2" : "large",
-                "dis3" : "new",
-                "qstn" : "In the text above, the word *spectacular* is closest in meaning to:"
-              },
-              "q5" : {
-                "ans" : "He thinks it is the best choice.",
-                "dis1" : "He thinks Henry is making a poor choice.",
-                "dis2" : "The grandfather is lonely.",
-                "dis3" : "He is sad Henry is moving home again.",
-                "qstn" : "What does the grandfather think about Henry’s choice?"
-              },
-              "q6" : {
-                "ans" : "Henry felt lonely often.",
-                "dis1" : "Henry misses his grandfather.",
-                "dis2" : "Henry wanted to stay in the city.",
-                "dis3" : "Henry was sorry to disappoint everyone.",
-                "qstn" : "How does the speaker describe Henry’s feeling while living the city?"
-              },
-              "q7" : {
-                "ans" : "bad | poor",
-                "dis1" : "information",
-                "dis2" : "listening",
-                "dis3" : "inspirational",
-                "qstn" : "In the text above, the word *unfortunate* is closest in meaning to:"
-              },
-              "q8" : {
-                "ans" : "People thought he would do well in the city.",
-                "dis1" : "Henry wanted to be successful.",
-                "dis2" : "Everyone thinks that Henry is smart.",
-                "dis3" : "Henry lives at home.",
-                "qstn" : "According to the text..."
-              },
-              "txtPrt1" : "Due to the tireless and unrelenting efforts of several of you, our community has finally raised enough money to build a new library in the town center. I am proud to be mayor of such a great place. You have all worked so hard. This library is going to be spectacular! A team of proficient engineers will arrive on Monday to start breaking ground.",
-              "txtPrt2" : "It is unfortunate to hear about Henry. We all thought that he would succeed at this new job. We all very sorry to hear that he did finally succumb to the loneliness of living by himself in the big city. His grandfather, however, thinks that his decision to come home was a wise and astute choice."
-            },
-            "tgts" : [ "community", "proficient", "spectacular", "unrelenting", "unfortunate", "astute", "succeed", "succumb" ]
-          },
-          "-LocutusOfBorg1_03" : {
-            "ctx" : "Email reply",
-            "exam" : {
-              "q1" : {
-                "ans" : "The email answers someone's questions.",
-                "dis1" : "Bill Gates is receiving this email.",
-                "dis2" : "The email is between co-workers.",
-                "dis3" : "The email was sent on 9/25.",
-                "qstn" : "Choose the TRUE statement:"
-              },
-              "q2" : {
-                "ans" : "companies",
-                "dis1" : "strength",
-                "dis2" : "buildings",
-                "dis3" : "advertisements",
-                "qstn" : "In the text above, the word *firms* is closest in meaning to:"
-              },
-              "q3" : {
-                "ans" : "Food and drinks will cost no extra.",
-                "dis1" : "The lunch will be refreshing.",
-                "dis2" : "There will be no snacks at the seminar.",
-                "dis3" : "No food is allowed to the seminar.",
-                "qstn" : "Which of the following statements is TRUE?"
-              },
-              "q4" : {
-                "ans" : "questions",
-                "dis1" : "interest",
-                "dis2" : "email",
-                "dis3" : "knowledge",
-                "qstn" : "In the text above, the word *inquiries* is closest in meaning to:"
-              },
-              "q5" : {
-                "ans" : "everybody in the neighborhood",
-                "dis1" : "old and young people",
-                "dis2" : "sick and poor people",
-                "dis3" : "small businesses just starting",
-                "qstn" : "Who will Mr. Gates say businesses should help?"
-              },
-              "q6" : {
-                "ans" : "No more than 40 people in the audience.",
-                "dis1" : "Exactly 40 people will be there.",
-                "dis2" : "There will be 40 seminars.",
-                "dis3" : "Each person can bring 40 friends.",
-                "qstn" : "What does the email say about the number of people going?"
-              },
-              "q7" : {
-                "ans" : "limited",
-                "dis1" : "not allowed",
-                "dis2" : "given",
-                "dis3" : "one ticket",
-                "qstn" : "In the text above, the word *restricted* is closest in meaning to:"
-              },
-              "q8" : {
-                "ans" : "Do not be shy to ask again.",
-                "dis1" : "The sender expects more questions.",
-                "dis2" : "The sender has no more questions.",
-                "dis3" : "Contact Mr. Gates for more information.",
-                "qstn" : "According to the email..."
-              },
-              "txt" : "As requested, I am sending information about the upcoming business seminars being held on October 1st.  Registration fees must be sent by September 25th.  The cost is $500.   Attendance is restricted to a maximum of 40 participants. The first seminar starts at 9:00 AM.  Fees include lunch and refreshments. The opening guest speaker is Bill Gates.  He will be presenting on the importance of supporting local firms.  He will close his presentation by talking on how businesses can support their local community. Thank you for your inquiries about our business seminars. If you have any further questions, please do not hesitate to contact us."
-            },
-            "practice" : {
-              "q1" : {
-                "ans" : "The notice was likely sent by a tour company.",
-                "dis1" : "Many visitors asked for tickets.",
-                "dis2" : "The notice was likely posted at the museum.",
-                "dis3" : "The notice is advertising a tour.",
-                "qstn" : "Choose the TRUE statement:"
-              },
-              "q2" : {
-                "ans" : "members",
-                "dis1" : "museum staff",
-                "dis2" : "children",
-                "dis3" : "firefighters",
-                "qstn" : "In the text above, the word *participants* is closest in meaning to:"
-              },
-              "q3" : {
-                "ans" : "Not many visitors can go to the museum.",
-                "dis1" : "The museum will not open for two weeks.",
-                "dis2" : "The Monday tour has been cancelled.",
-                "dis3" : "Some visitors were hurt in a fire.",
-                "qstn" : "Which of the following statements is TRUE?"
-              },
-              "q4" : {
-                "ans" : "snacks",
-                "dis1" : "luggage",
-                "dis2" : "tour",
-                "dis3" : "safety",
-                "qstn" : "In the text above, the word *refreshments* is closest in meaning to:"
-              },
-              "q5" : {
-                "ans" : "The business is called Homegrown.",
-                "dis1" : "Homegrown means: local people making food.",
-                "dis2" : "They sell food to farmers.",
-                "dis3" : "It is a very large farm.",
-                "qstn" : "What does the speaker say about Homegrown?"
-              },
-              "q6" : {
-                "ans" : "To get more information.",
-                "dis1" : "To sell your vegetables.",
-                "dis2" : "To know the name of the store.",
-                "dis3" : "If you don’t have a car.",
-                "qstn" : "For what reason does the speaker say to use the website?"
-              },
-              "q7" : {
-                "ans" : "delay",
-                "dis1" : "write",
-                "dis2" : "visit",
-                "dis3" : "necessary",
-                "qstn" : "In the text above, the word *hesitate* is closest in meaning to:"
-              },
-              "q8" : {
-                "ans" : "The business wants to open new a store.",
-                "dis1" : "The local community is 30 years old.",
-                "dis2" : "The business has 30 stores.",
-                "dis3" : "The business now has a store in your local area.",
-                "qstn" : "According to the text..."
-              },
-              "txtPrt1" : "This notice is being sent out to all participants who had requested tickets for the museum tour this Monday. The museum has recently suffered a fire and visitor numbers will be restricted for the next few weeks. This does not affect all those who have already made bookings with us. Furthermore, a free refreshments service will be introduced to those traveling by bus starting Monday.",
-              "txtPrt2" : "Homegrown is a firm that sells fruit and vegetables grown by local citizens and farmers. We have been operating for 30 years and now plan to open a store in your community. For general inquiries, please visit our website. For information on us buying your locally produced fruit and vegetables, please don’t hesitate to call us directly on 555-1234."
-            },
-            "tgts" : [ "requested", "restricted", "participants", "refreshments", "firm", "community", "inquiries", "hesitate" ]
-          },
-          "-LocutusOfBorg1_04" : {
-            "ctx" : "Voicemail",
-            "exam" : {
-              "q1" : {
-                "ans" : "Min-gyu says he is worried.",
-                "dis1" : "Min-gyu says he is angry.",
-                "dis2" : "Min-gyu is late now.",
-                "dis3" : "Min-gyu will get a ride soon.",
-                "qstn" : "Choose the TRUE statement:"
-              },
-              "q2" : {
-                "ans" : "cannot move",
-                "dis1" : "sitting",
-                "dis2" : "lonely",
-                "dis3" : "cannot use",
-                "qstn" : "In the text above, the word *stuck* is closest in meaning to:"
-              },
-              "q3" : {
-                "ans" : "The report will be late after 10am.",
-                "dis1" : "Min-gyu didn't do his report.",
-                "dis2" : "Min-gyu has one hour before his test.",
-                "dis3" : "Min-gyu’s assignment is for TOEIC.",
-                "qstn" : "Which of the following statements is TRUE?"
-              },
-              "q4" : {
-                "ans" : "situation",
-                "dis1" : "facts",
-                "dis2" : "report or test",
-                "dis3" : "feeling",
-                "qstn" : "In the text above, the word *predicament* is closest in meaning to:"
-              },
-              "q5" : {
-                "ans" : "There are too many people.",
-                "dis1" : "There people are interesting and tall.",
-                "dis2" : "The people are from Su-seong gu.",
-                "dis3" : "The people are all stranded.",
-                "qstn" : "What does Min-gyu say about the people waiting for a bus?"
-              },
-              "q6" : {
-                "ans" : "angry and unhappy",
-                "dis1" : "serious and strict",
-                "dis2" : "friendly and kind",
-                "dis3" : "cold and unfeeling",
-                "qstn" : "According to Min-gyu, how does the professor feel about late reports?"
-              },
-              "q7" : {
-                "ans" : "homework",
-                "dis1" : "test",
-                "dis2" : "biology",
-                "dis3" : "schedule",
-                "qstn" : "In the text above, the word *assignment* is closest in meaning to:"
-              },
-              "q8" : {
-                "ans" : "Min-gyu worries about finishing school.",
-                "dis1" : "Min-gyu will complete his studies.",
-                "dis2" : "Min-gyu thinks the TOEIC test is hard.",
-                "dis3" : "Min-gyu is in his senior year.",
-                "qstn" : "According to the voicemail..."
-              },
-              "txt" : "Hi, this is Min-gyu. I’m still stuck in Suseong-gu. I’m waiting for a bus, the queue here is remarkably long and I’m getting anxious about not being able to get a ride any time soon. I have to submit an assignment to my biology professor by 10am - you know he says it is infuriating when we turn in reports late! And that’s not even the worst of my predicament: We have a test for our TOEIC class at 11am, and I didn’t have time to study! I need this class to graduate. Help! Give me a call as soon as you can."
-            },
-            "practice" : {
-              "q1" : {
-                "ans" : "Sam’s cat cannot get out of a tree.",
-                "dis1" : "Sam’s neighbor called the police.",
-                "dis2" : "The police used a stick to save the cat.",
-                "dis3" : "The police saw a tree fall onto a house.",
-                "qstn" : "Choose the TRUE statement:"
-              },
-              "q2" : {
-                "ans" : "worried",
-                "dis1" : "clever",
-                "dis2" : "cry",
-                "dis3" : "innocent",
-                "qstn" : "In the text above, the word *anxious* is closest in meaning to:"
-              },
-              "q3" : {
-                "ans" : "The cat seemed very relaxed.",
-                "dis1" : "The cat was very cute.",
-                "dis2" : "The cat was angry and stressed.",
-                "dis3" : "The cat tried to climb out of the tree.",
-                "qstn" : "Which of the following statements is TRUE?"
-              },
-              "q4" : {
-                "ans" : "make",
-                "dis1" : "believe",
-                "dis2" : "win",
-                "dis3" : "adopt",
-                "qstn" : "In the text above, the word *submit* is closest in meaning to:"
-              },
-              "q5" : {
-                "ans" : "They may not complete school this year.",
-                "dis1" : "They want to join a morning class.",
-                "dis2" : "They want a full class.",
-                "dis3" : "They need a very good grade.",
-                "qstn" : "What does the speaker say about their problem?"
-              },
-              "q6" : {
-                "ans" : "That it was impossible to find a course.",
-                "dis1" : "They suggested more homework.",
-                "dis2" : "Too many courses were cancelled.",
-                "dis3" : "The student’s paperwork was lost.",
-                "qstn" : "According to the speaker, what did the administration say?"
-              },
-              "q7" : {
-                "ans" : "situation",
-                "dis1" : "favor",
-                "dis2" : "suggestion",
-                "dis3" : "placement",
-                "qstn" : "In the text above, the word *predicament* is closest in meaning to:"
-              },
-              "q8" : {
-                "ans" : "angry and frustrated",
-                "dis1" : "sorry and sad",
-                "dis2" : "hopeful and determined",
-                "dis3" : "tired and hungry",
-                "qstn" : "According to the text, the student feels..."
-              },
-              "txtPrt1" : "The police were called out to a house today as a cat had become stuck in a neighbor’s  tree. The owner, a ten year old named Sam, was anxious about his cat’s safety. The cat stayed remarkably calm and cooperated well with police during the rescue. Sam is happy to now have his cat home. The officers involved are not expecting to submit a report on the incident.",
-              "txtPrt2" : "Hello professor. Please read this message! I am in a difficult predicament and I need your help. I plan to graduate this year and I need to take one more course. I tried to enroll in your Friday course, but most classes are full and my schedule won’t allow me many options. The administration cannot find any other course assignments for me and that is really infuriating. Please let me join your class. Thank you."
-            },
-            "tgts" : [ "stuck", "remarkably", "anxious", "submit", "assignment", "infuriating", "predicament", "graduate" ]
+            "tgts" : [ "word" ]
           }
         }
       },
